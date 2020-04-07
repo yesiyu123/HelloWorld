@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         chaoXinQianDao
+// @name         chaoXinSignIn
 // @version      0.1
 // @author       yesiyu123
 // @match        https://mobilelearn.chaoxing.com/widget/pcpick/stu/index?courseId=*&jclassId=*
