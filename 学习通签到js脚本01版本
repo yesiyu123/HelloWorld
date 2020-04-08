@@ -7,45 +7,19 @@
 // ==/UserScript==
 
 //本脚本仅支持跳转签到
-
-var oDiv = document.getElementById("1").innerHTML;
-var num;
-for (var i =0; i < oDiv.length; i++){//查询有几个任务
-    if (oDiv[i] == '('){
-        num = oDiv[i+1];
-    }
-}
-
 var oDiv1 = document.getElementById("startList");
-num=6;
-
-var sleep = function(time) {//延迟函数
-    var startTime = new Date().getTime() + parseInt(time, 10);
-    while(new Date().getTime() < startTime) {}
-};
 
 function fqiandao(){
-    sleep(60000);//延迟60秒
-    var num1;
-    for (var j =0; j < oDiv.length; j++){
-        if (oDiv[j] == '('){
-            num1 = oDiv[j+1];
-        }
-    }
-    while(num < num1){
-        if (oDiv1){
-            var atext = oDiv1.getElementsByClassName("green");
-            for(var x = 0; x<atext.length;x++){
-                if (atext[x].childNodes[0].nodeValue == '签到'){
-                    atext[x].click();
-                    break;
-                }else{
-                    location.reload();//刷新页面
-                }
+    if (oDiv1){
+        var atext = oDiv1.getElementsByClassName("green");
+        for(var x = 0; x<atext.length;x++){
+            if (atext[x].childNodes[0].nodeValue == '签到'){
+                atext[x].click();
+                break;
             }
         }
-        num++;
     }
+    location.reload();//刷新页面
 }
 
-fqiandao();
+setTimeout(fqiandao,60000);
