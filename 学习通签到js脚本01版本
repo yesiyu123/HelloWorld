@@ -22,4 +22,4 @@ function fqiandao(){
     location.reload();//刷新页面
 }
 
-setTimeout(fqiandao,60000);
+setTimeout(fqiandao,60000);//延迟1分钟执行
